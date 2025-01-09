@@ -3,15 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./styles/output.css">
 
     <title>GoDelivery</title>
 </head>
 <body>
+    <!--Inicio do Header -->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center ">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img
+             src="./assets/hamb-7.png" 
+             alt="Logo GoDelivery"
+             class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+             />
+             <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
+                GoDelivery
+            </h1>
 
-    <h1>Projeto Delivery</h1>
-    <h2>Olá mundo!</h2>
-    
+            <span class="text-white font-medium">Rua dev 25, Manaus - AM</span>
+
+            <div class="bg-green-600 px-3 rounded-lg py-1 mt-4" id="date-span">
+                <span class="text-white font-medium">
+                    Seg á Dom - 18:00 as 23:00
+                </span>
+            </div>
+        </div>
+    </header>
+    <!--Fim do Header -->
+
+    <h2 class="text-2xl md:text-4xl font-bold text-center mt-9 mb-6">
+        Confira as opções do nosso cardápio!
+    </h2>
+
+    <!--Início Menu -->
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            
+            <!--Início Produto -->
+            <div class="flex gap-2">
+                <img 
+                src="./assets/hamb-1.png" 
+                alt="Smash Salad"
+                class="w-28 h-28 rounded-md hover:scale-105 hover:-rotate-1 duration-300"
+                />
+
+                
+                <div>
+                    <p class="font-bold ">Smash Salad</p>
+                    <p class="text-sm">Um sanduíche irresistível, combinando suculenta carne smash, alface fresca, tomate, molho especial e um toque de crocância, tudo no pão perfeito.</p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p class="font-bold text-lg">R$ 29.99</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Smash Salad"
+                        data-price="29.99"
+                        />
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim do Produto -->
+
+            <!--Início Produto -->
+            <div class="flex gap-2">
+                <img 
+                src="./assets/hamb-2.png" 
+                alt="Smash Salad"
+                class="w-28 h-28 rounded-md hover:scale-105 hover:-rotate-1 duration-300"
+                />
+
+                
+                <div>
+                    <p class="font-bold ">Smash Bacon</p>
+                    <p class="text-sm">Uma combinação irresistível de carne smash suculenta, fatias crocantes de bacon, queijo derretido, alface, tomate e molho especial, servido em um pão macio.</p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p class="font-bold text-lg">R$ 39.99</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Smash Bacon"
+                        data-price="39.99"
+                        />
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim do Produto -->
+
+            <!--Início Produto -->
+            <div class="flex gap-2">
+                <img 
+                src="./assets/hamb-3.png" 
+                alt="Smash Salad"
+                class="w-28 h-28 rounded-md hover:scale-105 hover:-rotate-1 duration-300"
+                />
+
+                
+                <div>
+                    <p class="font-bold ">Smash Cheddar</p>
+                    <p class="text-sm">Uma combinação irresistível de carne smash suculenta, fatias crocantes de bacon, queijo derretido, alface, tomate e molho especial, servido em um pão macio.</p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p class="font-bold text-lg">R$ 29.99</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Smash Cheddar"
+                        data-price="29.99"
+                        />
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim do Produto -->
+
+            <!--Início Produto -->
+            <div class="flex gap-2">
+                <img 
+                src="./assets/hamb-5.png" 
+                alt="Smash Salad"
+                class="w-28 h-28 rounded-md hover:scale-105 hover:-rotate-1 duration-300"
+                />
+
+                
+                <div>
+                    <p class="font-bold ">Duplo Stacker</p>
+                    <p class="text-sm">Uma combinação irresistível de carne smash suculenta, fatias crocantes de bacon, queijo derretido, alface, tomate e molho especial, servido em um pão macio.</p>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <p class="font-bold text-lg">R$ 39.99</p>
+                        <button 
+                        class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                        data-name="Duplo Stacker"
+                        data-price="39.99"
+                        />
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Fim do Produto -->
+
+        </main>
+    </div>
+    <!--Fim Menu -->
 </body>
 </html>
