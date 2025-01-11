@@ -4,10 +4,15 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "home": "url('/assets/bg.png')"
+        "home": "url('/assets/bg.png')",
+      },
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
 
