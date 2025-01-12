@@ -7,7 +7,7 @@ module.exports = {
         "home": "url('/assets/bg.png')",
       },
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
+        sans: ['Poppins', 'sans-serif'], 
       }
     },
   },
