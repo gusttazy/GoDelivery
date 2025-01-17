@@ -54,10 +54,11 @@ function addItemToCart(name, price) {
             name,
             price,
             quantity: 1,
-        })
+        });
     }
 
     updateCartModal();
+    updateFooterButtonVisibility(); // Atualiza a visibilidade e contador
 }
 
 // Função para atualizar o carrinho 
@@ -67,22 +68,48 @@ function updateCartModal() {
 
     cart.forEach(item => {
         const cartItemElelement = document.createElement("div");
+        cartItemElelement.classList.add("flex", "justify-between", "mb-4", "flex-col");
 
         cartItemElelement.innerHTML = `
-            <div>
+            <div class="flex items-center justify-between">
                 <div>
-                    <p>${item.name}</p>
-                    <p>${item.quantity}</p>
-                    <p>R$ ${item.price}</p>
+                    <p class="font-medium">${item.name}</p>
+                    <p>Qtd: ${item.quantity}</p>
+                    <p class="font-medium mt-2">R$ ${item.price}</p>
                 </div>
 
-                <div>
-                    <button>Remover</button>
-                </div>
+                <button>Remover</button>
             </div>
         `
 
         cartItemsContainer.appendChild(cartItemElelement);
     })
 }
+
+// Função para atualizar a visibilidade do footer
+function updateFooterButtonVisibility() {
+    const footerBtn = document.getElementById("footer-btn");
+
+    // Verifica se o carrinho está vazio
+    if (cart.length > 0) {
+        footerBtn.classList.remove("hidden"); 
+        setTimeout(() => {
+            footerBtn.classList.remove("opacity-0", "translate-y-4"); o
+        }, 10); 
+    } else {
+        footerBtn.classList.add("opacity-0", "translate-y-4"); 
+        setTimeout(() => {
+            footerBtn.classList.add("hidden"); 
+        }, 300); 
+    }
+
+    // Atualiza o contador de itens
+    const cartCount = cart.reduce((count, item) => count + item.quantity, 0);
+    document.getElementById("cart-count").textContent = cartCount;
+}
+
+
+
+
+
         
