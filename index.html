@@ -204,8 +204,7 @@
             <p class="font-bold">Coca-cola lata</p>
             <p class="text-sm line-clamp-2">
               A Coca-Cola em lata é um refrigerante clássico e refrescante,
-              conhecido mundialmente por seu sabor único e equilíbrio perfeito
-              entre doçura e efervescência.
+              conhecido mundialmente por seu sabor único.
             </p>
 
             <div class="flex items-center gap-2 justify-between">
@@ -236,8 +235,7 @@
             <p class="font-bold">Guaraná lata</p>
             <p class="text-sm line-clamp-2">
               O Guaraná em lata é um refrigerante brasileiro leve e saboroso,
-              feito com o autêntico extrato de guaraná. Refrescante e levemente
-              adocicado, é perfeito para qualquer ocasião.
+              feito com o autêntico extrato de guaraná.
             </p>
 
             <div class="flex items-center gap-2 justify-between">
@@ -266,21 +264,67 @@
       <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
         <h2 class="text-center text-xl font-bold mb-2">Meu carrinho</h2>
 
+        <!-- Itens do carrinho -->
         <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
 
+        <!-- Total -->
         <p class="font-bold">Total: R$ <span id="cart-total">0.00</span></p>
 
-        <p class="font-bold mt-2">Endereço de entrega:</p>
-        <input
-          type="text"
-          placeholder=""
-          id="address"
-          class="w-full border-2 p-1 rounded my-1"
-        />
-        <p class="text-red-500 hidden" id="address-warn">
-          Digite seu endereço completo!!
-        </p>
+        <!-- Endereço de entrega -->
+        <p class="font-bold mt-2 flex justify-center items-center">Endereço de entrega</p>
 
+        <!-- Bairro -->
+        <div class="mt-2">
+          <label for="neighborhood" class="font-medium flex items-center gap-2">
+            <i class="fa fa-map-marker"></i> Escolha seu bairro
+          </label>
+          <select id="neighborhood" class="w-full border-2 p-2 rounded my-1">
+            <option value="">Selecione um bairro</option>
+            <option value="bairro1">Bairro 1</option>
+            <option value="bairro2">Bairro 2</option>
+          </select>
+        </div>
+
+        <!-- Rua -->
+        <div class="mt-2">
+          <label for="street" class="font-medium flex items-center gap-2">
+            <i class="fa fa-road"></i> Endereço 
+          </label>
+          <input
+            type="text"
+            id="street"
+            placeholder="Rua, avenida, etc."
+            class="w-full border-2 p-2 rounded my-1"
+          />
+        </div>
+
+        <!-- Número -->
+        <div class="mt-2">
+          <label for="number" class="font-medium flex items-center gap-2">
+            <i class="fa fa-tag"></i> Número
+          </label>
+          <input
+            type="text"
+            id="number"
+            placeholder="Número da residência"
+            class="w-full border-2 p-2 rounded my-1"
+          />
+        </div>
+
+        <!-- Complemento -->
+        <div class="mt-2">
+          <label for="complement" class="font-medium flex items-center gap-2">
+            <i class="fa fa-info-circle"></i> Complemento
+          </label>
+          <input
+            type="text"
+            id="complement"
+            placeholder="Apartamento, referência, etc."
+            class="w-full border-2 p-2 rounded my-1"
+          />
+        </div>
+
+        <!-- Botões -->
         <div class="flex items-center justify-between mt-4 w-full">
           <button
             id="close-modal-btn"
@@ -299,7 +343,7 @@
     </div>
     <!-- Modal fim -->
 
-    <!-- Botao footer -->
+    <!-- Botao carrinho -->
     <footer
       class="fixed bottom-4 right-4 z-40 opacity-0 translate-y-4 transition-all duration-300 ease-in-out hidden"
       id="footer-btn"
@@ -317,7 +361,7 @@
         </span>
       </button>
     </footer>
-    <!-- Fim Botao footer -->
+    <!-- Fim Botao carrinho -->
 
     <script src="./script.js"></script>
   </body>

@@ -72,13 +72,13 @@ function updateCartModal() {
 
         cartItemElelement.innerHTML = `
             <div class="flex items-center justify-between">
-                <div>
+                <div class"border border-gray-300">
                     <p class="font-medium">${item.name}</p>
                     <p>Qtd: ${item.quantity}</p>
                     <p class="font-medium mt-2">R$ ${item.price}</p>
                 </div>
 
-                <button>Remover</button>
+                <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700 duration-300">Remover</button>
             </div>
         `
 
