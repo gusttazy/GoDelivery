@@ -1,368 +1,272 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./styles/output.css" />
 
-    <title>Delivery</title>
-  </head>
-  <body>
-    <!--Inicio do Header -->
-    <header class="w-full h-[420px] bg-home bg-cover bg-center">
-      <div class="w-full h-full flex flex-col justify-center items-center">
-        <img
-          src="./assets/hamb-8.png"
-          alt="Logo GoDelivery"
-          class="w-40 h-40 hover:scale-105 duration-300 rounded-full"
-        />
-        <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Gusta Burguer</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles/output.css" />
 
-        <span class="text-white font-medium">Rua Burguer 25, Manaus - AM</span>
+  <title>Delivery</title>
+</head>
 
-        <button
-          class="bg-green-600 px-3 rounded-lg py-1 mt-4 hover:bg-green-700 duration-300"
-          id="date-span"
-        >
-          <span class="text-white font-medium">
-            Seg á Dom - 18:00 as 23:00
-          </span>
-        </button>
-      </div>
-    </header>
-    <!--Fim do Header -->
+<body>
+  <!--Inicio do Header -->
+  <header class="w-full h-[420px] bg-home bg-cover bg-center">
+    <div class="w-full h-full flex flex-col justify-center items-center">
+      <img src="./assets/hamb-8.png" alt="Logo GoDelivery"
+        class="w-40 h-40 hover:scale-105 duration-300 rounded-full" />
+      <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Gusta Burguer</h1>
 
-    <div class="mx-auto max-w-7xl px-2 my-2">
-      <h2 class="text-2xl md:text-4xl font-bold mt-9 mb-6">Hamburguers</h2>
-    </div>
+      <span class="text-white font-medium">Rua Burguer 25, Manaus - AM</span>
 
-    <!--Início Menu -->
-    <div id="menu">
-      <main
-        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
-      >
-        <!--Início Produto -->
-        <div
-          class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300"
-        >
-          <img
-            src="./assets/hamb-1.png"
-            alt="Smash Salad"
-            class="w-28 h-28 rounded-lg"
-          />
-
-          <div class="flex flex-col justify-between">
-            <p class="font-bold">Smash Salad</p>
-            <p class="text-sm line-clamp-2">
-              Delicioso hambúrguer de carne smash com bacon crocante, queijo
-              derretido, alface fresca, tomate suculento e molho especial no pão
-              macio.
-            </p>
-
-            <div class="flex items-center gap-2 justify-between">
-              <p class="font-bold text-lg mt-2">R$ 29.99</p>
-              <button
-                class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
-                data-name="Smash Salad"
-                data-price="29.99"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--Fim do Produto -->
-
-        <!--Início Produto -->
-        <div
-          class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300"
-        >
-          <img
-            src="./assets/hamb-2.png"
-            alt="Smash Bacon"
-            class="w-28 h-28 rounded-md"
-          />
-
-          <div class="flex flex-col justify-between">
-            <p class="font-bold">Smash Bacon</p>
-            <p class="text-sm line-clamp-2">
-              Hambúrguer de carne smash suculenta com fatias extras de bacon
-              crocante, queijo delicioso e molho especial servido no pão
-              perfeito.
-            </p>
-
-            <div class="flex items-center gap-2 justify-between">
-              <p class="font-bold text-lg mt-2">R$ 39.99</p>
-              <button
-                class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
-                data-name="Smash Bacon"
-                data-price="39.99"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--Fim do Produto -->
-
-        <!--Início Produto -->
-        <div
-          class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300"
-        >
-          <img
-            src="./assets/hamb-3.png"
-            alt="Smash Cheddar"
-            class="w-28 h-28 rounded-md"
-          />
-
-          <div class="flex flex-col justify-between">
-            <p class="font-bold">Smash Cheddar</p>
-            <p class="text-sm line-clamp-2">
-              Incrível hambúrguer de carne smash, coberto com bacon crocante,
-              queijo cheddar derretido e molho especial no pão fofinho.
-            </p>
-
-            <div class="flex items-center gap-2 justify-between">
-              <p class="font-bold text-lg mt-2">R$ 29.99</p>
-              <button
-                class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
-                data-name="Smash Cheddar"
-                data-price="29.99"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--Fim do Produto -->
-
-        <!--Início Produto -->
-        <div
-          class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300"
-        >
-          <img
-            src="./assets/hamb-7.png"
-            alt="Duplo Stacker"
-            class="w-28 h-28 rounded-md"
-          />
-
-          <div class="flex flex-col justify-between">
-            <p class="font-bold">Duplo Stacker</p>
-            <p class="text-sm line-clamp-2">
-              Dois suculentos hambúrgueres de carne smash com bacon crocante,
-              queijo derretido e molho especial, no pão macio delicioso.
-            </p>
-
-            <div class="flex items-center gap-2 justify-between">
-              <p class="font-bold text-lg mt-2">R$ 39.99</p>
-              <button
-                class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
-                data-name="Duplo Stacker"
-                data-price="39.99"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--Fim do Produto -->
-      </main>
-
-      <div class="mx-auto max-w-7xl px-2 my-2">
-        <h2 class="text-2xl md:text-4xl font-bold mt-9 mb-6">Bebidas</h2>
-      </div>
-
-      <!--Grid Bebidas -->
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
-        id="menu"
-      >
-        <!--Início Produto -->
-        <div
-          class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300"
-        >
-          <img
-            src="./assets/refri-1.png"
-            alt="Coca-cola lata"
-            class="w-28 h-28 rounded-md"
-          />
-
-          <div class="flex flex-col justify-between">
-            <p class="font-bold">Coca-cola lata</p>
-            <p class="text-sm line-clamp-2">
-              A Coca-Cola em lata é um refrigerante clássico e refrescante,
-              conhecido mundialmente por seu sabor único.
-            </p>
-
-            <div class="flex items-center gap-2 justify-between">
-              <p class="font-bold text-lg mt-2">R$ 8.00</p>
-              <button
-                class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
-                data-name="Coca-cola lata"
-                data-price="8.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--Fim do Produto -->
-
-        <!--Início Produto -->
-        <div
-          class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300"
-        >
-          <img
-            src="./assets/refri-2.png"
-            alt="Guaraná lata"
-            class="w-28 h-28 rounded-md"
-          />
-
-          <div class="flex flex-col justify-between">
-            <p class="font-bold">Guaraná lata</p>
-            <p class="text-sm line-clamp-2">
-              O Guaraná em lata é um refrigerante brasileiro leve e saboroso,
-              feito com o autêntico extrato de guaraná.
-            </p>
-
-            <div class="flex items-center gap-2 justify-between">
-              <p class="font-bold text-lg mt-2">R$ 8.00</p>
-              <button
-                class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
-                data-name="Guaraná lata"
-                data-price="8.00"
-              >
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!--Fim do Produto -->
-      </div>
-      <!--Fim Bebidas -->
-    </div>
-    <!--Fim Menu -->
-
-    <!-- Modal -->
-    <div
-      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
-      id="cart-modal"
-    >
-      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
-        <h2 class="text-center text-xl font-bold mb-2">Meu carrinho</h2>
-
-        <!-- Itens do carrinho -->
-        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
-
-        <!-- Total -->
-        <p class="font-bold">Total: R$ <span id="cart-total">0.00</span></p>
-
-        <!-- Endereço de entrega -->
-        <p class="font-bold mt-2 flex justify-center items-center">Endereço de entrega</p>
-
-        <!-- Bairro -->
-        <div class="mt-2">
-          <label for="neighborhood" class="font-medium flex items-center gap-2">
-            <i class="fa fa-map-marker"></i> Escolha seu bairro
-          </label>
-          <select id="neighborhood" class="w-full border-2 p-2 rounded my-1">
-            <option value="">Selecione um bairro</option>
-            <option value="bairro1">Bairro 1</option>
-            <option value="bairro2">Bairro 2</option>
-          </select>
-        </div>
-
-        <!-- Rua -->
-        <div class="mt-2">
-          <label for="street" class="font-medium flex items-center gap-2">
-            <i class="fa fa-road"></i> Endereço 
-          </label>
-          <input
-            type="text"
-            id="street"
-            placeholder="Rua, avenida, etc."
-            class="w-full border-2 p-2 rounded my-1"
-          />
-        </div>
-
-        <!-- Número -->
-        <div class="mt-2">
-          <label for="number" class="font-medium flex items-center gap-2">
-            <i class="fa fa-tag"></i> Número
-          </label>
-          <input
-            type="text"
-            id="number"
-            placeholder="Número da residência"
-            class="w-full border-2 p-2 rounded my-1"
-          />
-        </div>
-
-        <!-- Complemento -->
-        <div class="mt-2">
-          <label for="complement" class="font-medium flex items-center gap-2">
-            <i class="fa fa-info-circle"></i> Complemento
-          </label>
-          <input
-            type="text"
-            id="complement"
-            placeholder="Apartamento, referência, etc."
-            class="w-full border-2 p-2 rounded my-1"
-          />
-        </div>
-
-        <!-- Botões -->
-        <div class="flex items-center justify-between mt-4 w-full">
-          <button
-            id="close-modal-btn"
-            class="bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700 duration-300"
-          >
-            Fechar
-          </button>
-          <button
-            id="checkout-btn"
-            class="bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700 duration-300"
-          >
-            Finalizar Pedido
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Modal fim -->
-
-    <!-- Botao carrinho -->
-    <footer
-      class="fixed bottom-4 right-4 z-40 opacity-0 translate-y-4 transition-all duration-300 ease-in-out hidden"
-      id="footer-btn"
-    >
-      <button
-        class="relative w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-lg hover:bg-orange-600 duration-300"
-        id="cart-btn"
-      >
-        <i class="fa fa-cart-plus text-white text-2xl"></i>
-        <span
-          id="cart-count"
-          class="absolute bottom-0 right-0 bg-orange-700 text-white text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full transform translate-x-1 translate-y-1"
-        >
-          0
+      <button class="bg-green-600 px-3 rounded-lg py-1 mt-4 hover:bg-green-700 duration-300" id="date-span">
+        <span class="text-white font-medium">
+          Seg á Dom - 18:00 as 23:00
         </span>
       </button>
-    </footer>
-    <!-- Fim Botao carrinho -->
+    </div>
+  </header>
+  <!--Fim do Header -->
 
-    <script src="./script.js"></script>
-  </body>
+  <div class="mx-auto max-w-7xl px-2 my-2">
+    <h2 class="text-2xl md:text-4xl font-bold mt-9 mb-6">Hamburguers</h2>
+  </div>
+
+  <!--Início Menu -->
+  <div id="menu">
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+      <!--Início Produto -->
+      <div class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+        <img src="./assets/hamb-1.png" alt="Smash Salad" class="w-28 h-28 rounded-lg" />
+
+        <div class="flex flex-col justify-between">
+          <p class="font-bold">Smash Salad</p>
+          <p class="text-sm line-clamp-2">
+            Delicioso hambúrguer de carne smash com bacon crocante, queijo
+            derretido, alface fresca, tomate suculento e molho especial no pão
+            macio.
+          </p>
+
+          <div class="flex items-center gap-2 justify-between">
+            <p class="font-bold text-lg mt-2">R$ 29.99</p>
+            <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
+              data-name="Smash Salad" data-price="29.99">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Fim do Produto -->
+
+      <!--Início Produto -->
+      <div class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+        <img src="./assets/hamb-2.png" alt="Smash Bacon" class="w-28 h-28 rounded-md" />
+
+        <div class="flex flex-col justify-between">
+          <p class="font-bold">Smash Bacon</p>
+          <p class="text-sm line-clamp-2">
+            Hambúrguer de carne smash suculenta com fatias extras de bacon
+            crocante, queijo delicioso e molho especial servido no pão
+            perfeito.
+          </p>
+
+          <div class="flex items-center gap-2 justify-between">
+            <p class="font-bold text-lg mt-2">R$ 39.99</p>
+            <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
+              data-name="Smash Bacon" data-price="39.99">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Fim do Produto -->
+
+      <!--Início Produto -->
+      <div class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+        <img src="./assets/hamb-3.png" alt="Smash Cheddar" class="w-28 h-28 rounded-md" />
+
+        <div class="flex flex-col justify-between">
+          <p class="font-bold">Smash Cheddar</p>
+          <p class="text-sm line-clamp-2">
+            Incrível hambúrguer de carne smash, coberto com bacon crocante,
+            queijo cheddar derretido e molho especial no pão fofinho.
+          </p>
+
+          <div class="flex items-center gap-2 justify-between">
+            <p class="font-bold text-lg mt-2">R$ 29.99</p>
+            <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
+              data-name="Smash Cheddar" data-price="29.99">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Fim do Produto -->
+
+      <!--Início Produto -->
+      <div class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+        <img src="./assets/hamb-7.png" alt="Duplo Stacker" class="w-28 h-28 rounded-md" />
+
+        <div class="flex flex-col justify-between">
+          <p class="font-bold">Duplo Stacker</p>
+          <p class="text-sm line-clamp-2">
+            Dois suculentos hambúrgueres de carne smash com bacon crocante,
+            queijo derretido e molho especial, no pão macio delicioso.
+          </p>
+
+          <div class="flex items-center gap-2 justify-between">
+            <p class="font-bold text-lg mt-2">R$ 39.99</p>
+            <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
+              data-name="Duplo Stacker" data-price="39.99">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Fim do Produto -->
+    </main>
+
+    <div class="mx-auto max-w-7xl px-2 my-2">
+      <h2 class="text-2xl md:text-4xl font-bold mt-9 mb-6">Bebidas</h2>
+    </div>
+
+    <!--Grid Bebidas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+      <!--Início Produto -->
+      <div class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+        <img src="./assets/refri-1.png" alt="Coca-cola lata" class="w-28 h-28 rounded-md" />
+
+        <div class="flex flex-col justify-between">
+          <p class="font-bold">Coca-cola lata</p>
+          <p class="text-sm line-clamp-2">
+            A Coca-Cola em lata é um refrigerante clássico e refrescante,
+            conhecido mundialmente por seu sabor único.
+          </p>
+
+          <div class="flex items-center gap-2 justify-between">
+            <p class="font-bold text-lg mt-2">R$ 8.00</p>
+            <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
+              data-name="Coca-cola lata" data-price="8.00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Fim do Produto -->
+
+      <!--Início Produto -->
+      <div class="flex gap-2 border border-gray-300 p-4 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+        <img src="./assets/refri-2.png" alt="Guaraná lata" class="w-28 h-28 rounded-md" />
+
+        <div class="flex flex-col justify-between">
+          <p class="font-bold">Guaraná lata</p>
+          <p class="text-sm line-clamp-2">
+            O Guaraná em lata é um refrigerante brasileiro leve e saboroso,
+            feito com o autêntico extrato de guaraná.
+          </p>
+
+          <div class="flex items-center gap-2 justify-between">
+            <p class="font-bold text-lg mt-2">R$ 8.00</p>
+            <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:bg-green-700 duration-300"
+              data-name="Guaraná lata" data-price="8.00">
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Fim do Produto -->
+    </div>
+    <!--Fim Bebidas -->
+  </div>
+  <!--Fim Menu -->
+
+  <!-- Modal -->
+  <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+    <div class="bg-white p-5 rounded-md w-[90%] max-w-[600px] overflow-x-auto">
+
+      <h2 class="text-center text-lg font-bold mb-2">Meu carrinho</h2>
+
+      <!-- Itens do carrinho -->
+      <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+      <!-- Total -->
+      <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+      <!-- Endereço de entrega -->
+      <p class="font-bold mt-2 text-lg flex justify-center items-center">Endereço de entrega</p>
+
+      <!-- Bairro -->
+      <div class="mt-2">
+        <label for="neighborhood" class="font-medium flex items-center gap-2">
+          <i class="fa fa-map-marker"></i> Escolha seu bairro
+        </label>
+        <select id="neighborhood" class="w-full border-2 p-2 rounded my-1">
+          <option value="">Selecione um bairro</option>
+          <option value="bairro1">Bairro 1</option>
+          <option value="bairro2">Bairro 2</option>
+        </select>
+      </div>
+
+      <!-- Rua -->
+      <div class="mt-2">
+        <label for="street" class="font-medium flex items-center gap-2">
+          <i class="fa fa-road"></i> Endereço
+        </label>
+        <input type="text" id="street" placeholder="Rua, avenida, etc." class="w-full border-2 p-2 rounded my-1" />
+      </div>
+
+      <!-- Número -->
+      <div class="mt-2">
+        <label for="number" class="font-medium flex items-center gap-2">
+          <i class="fa fa-tag"></i> Número
+        </label>
+        <input type="text" id="number" placeholder="Número da residência" class="w-full border-2 p-2 rounded my-1" />
+      </div>
+
+      <!-- Complemento -->
+      <div class="mt-2">
+        <label for="complement" class="font-medium flex items-center gap-2">
+          <i class="fa fa-info-circle"></i> Complemento
+        </label>
+        <input type="text" id="complement" placeholder="Apartamento, referência, etc."
+          class="w-full border-2 p-2 rounded my-1" />
+      </div>
+
+      <!-- Botões -->
+      <div class="flex items-center justify-between mt-4 w-full">
+        <button id="close-modal-btn" class="bg-red-600 text-white px-4 py-1 rounded hover:bg-red-700 duration-300">
+          Fechar
+        </button>
+        <button id="checkout-btn" class="bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700 duration-300">
+          Finalizar Pedido
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal fim -->
+
+  <!-- Botao carrinho -->
+  <footer class="fixed bottom-4 right-4 z-40 opacity-0 translate-y-4 transition-all duration-300 ease-in-out hidden"
+    id="footer-btn">
+    <button
+      class="relative w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-lg hover:bg-orange-600 duration-300"
+      id="cart-btn">
+      <i class="fa fa-cart-plus text-white text-2xl"></i>
+      <span id="cart-count"
+        class="absolute bottom-0 right-0 bg-orange-700 text-white text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full transform translate-x-1 translate-y-1">
+        0
+      </span>
+    </button>
+  </footer>
+  <!-- Fim Botao carrinho -->
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
