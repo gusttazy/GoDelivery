@@ -154,7 +154,7 @@ function removeItemCart(name) {
 
 // Função para resetar os estilos dos campos
 function resetFieldStyles() {
-    neighborhoodInput.classList.remove("border-red-500", "placeholder-red-500");
+    neighborhoodInput.classList.remove("border-red-500", "placeholder-red-500", "invalid");
     streetInput.classList.remove("border-red-500", "placeholder-red-500");
     numberInput.classList.remove("border-red-500", "placeholder-red-500");
     complementInput.classList.remove("border-red-500", "placeholder-red-500");
@@ -165,7 +165,7 @@ function validateFields() {
     let isValid = true;
 
     if (!neighborhoodInput.value.trim()) {
-        neighborhoodInput.classList.add("border-red-500", "placeholder-red-500");
+        neighborhoodInput.classList.add("border-red-500", "placeholder-red-500", "invalid");
         isValid = false;
     }
 
@@ -206,9 +206,9 @@ checkoutBtn.addEventListener("click", function () {
 });
 
 // Evento para remover destaques ao preencher os campos
-neighborhoodInput.addEventListener("input", function () {
+neighborhoodInput.addEventListener("change", function () {
     if (neighborhoodInput.value.trim()) {
-        neighborhoodInput.classList.remove("border-red-500", "placeholder-red-500");
+        neighborhoodInput.classList.remove("border-red-500", "placeholder-red-500", "invalid");
     }
 });
 
