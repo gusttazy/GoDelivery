@@ -188,12 +188,11 @@
 
   <!-- Modal -->
   <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
-    <div class="bg-white p-5 rounded-md w-[90%] max-w-[600px] overflow-x-auto">
-
+    <div class="bg-white p-5 rounded-md w-[90%] max-w-[600px] max-h-[90vh] overflow-y-auto">
       <h2 class="text-center text-lg font-bold mb-2">Meu carrinho</h2>
 
       <!-- Itens do carrinho -->
-      <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+      <div id="cart-items" class="flex justify-between mb-2 flex-col max-h-[300px] overflow-y-auto"></div>
 
       <!-- Total -->
       <p class="font-bold">Total: <span id="cart-total">0.00</span></p>

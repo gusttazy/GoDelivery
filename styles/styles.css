@@ -3,6 +3,24 @@
 @tailwind utilities;
 
 body {
-    background-color: #F7F6F8;
-    font-family: "Poppins", serif;
+  background-color: #f7f6f8;
+  font-family: "Poppins", serif;
+}
+
+#cart-items::-webkit-scrollbar {
+  width: 8px;
+}
+
+#cart-items::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+#cart-items::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#cart-items::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
