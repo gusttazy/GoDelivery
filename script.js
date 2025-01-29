@@ -6,8 +6,12 @@ const cartTotal = document.getElementById("cart-total");
 const checkoutBtn = document.getElementById("checkout-btn");
 const closeModalBtn = document.getElementById("close-modal-btn");
 const cartCounter = document.getElementById("cart-count");
-const addressInput = document.getElementById("address");
-const addressWarn = document.getElementById("address-warn");
+const neighborhoodInput = document.getElementById("neighborhood");
+const streetInput = document.getElementById("street");
+const numberInput = document.getElementById("number");
+const complementInput = document.getElementById("complement");
+const confirmationModal = document.getElementById("confirmation-modal");
+const closeConfirmationModalBtn = document.getElementById("close-confirmation-modal-btn");
 
 let cart = [];
 
@@ -147,6 +151,95 @@ function removeItemCart(name) {
         updateFooterButtonVisibility();
     }
 }
+
+// Função para resetar os estilos dos campos
+function resetFieldStyles() {
+    neighborhoodInput.classList.remove("border-red-500", "placeholder-red-500");
+    streetInput.classList.remove("border-red-500", "placeholder-red-500");
+    numberInput.classList.remove("border-red-500", "placeholder-red-500");
+    complementInput.classList.remove("border-red-500", "placeholder-red-500");
+}
+
+// Função para validar os campos
+function validateFields() {
+    let isValid = true;
+
+    if (!neighborhoodInput.value.trim()) {
+        neighborhoodInput.classList.add("border-red-500", "placeholder-red-500");
+        isValid = false;
+    }
+
+    if (!streetInput.value.trim()) {
+        streetInput.classList.add("border-red-500", "placeholder-red-500");
+        isValid = false;
+    }
+
+    if (!numberInput.value.trim()) {
+        numberInput.classList.add("border-red-500", "placeholder-red-500");
+        isValid = false;
+    }
+
+    // Validação do complemento (opcional, mas destacado se vazio)
+    if (!complementInput.value.trim()) {
+        complementInput.classList.add("border-red-500", "placeholder-red-500");
+        // isValid = false; // Remova o comentário se quiser que o complemento seja obrigatório
+    }
+
+    return isValid;
+}
+
+// Evento de clique no botão "Finalizar Pedido"
+checkoutBtn.addEventListener("click", function () {
+    // Validar os campos
+    const isValid = validateFields();
+
+    // Se algum campo estiver inválido, não prosseguir com a finalização
+    if (!isValid) {
+        return;
+    }
+
+    // Fechar o modal do carrinho
+    cartModal.style.display = "none";
+
+    // Abrir o modal de confirmação
+    confirmationModal.style.display = "flex";
+});
+
+// Evento para remover destaques ao preencher os campos
+neighborhoodInput.addEventListener("input", function () {
+    if (neighborhoodInput.value.trim()) {
+        neighborhoodInput.classList.remove("border-red-500", "placeholder-red-500");
+    }
+});
+
+streetInput.addEventListener("input", function () {
+    if (streetInput.value.trim()) {
+        streetInput.classList.remove("border-red-500", "placeholder-red-500");
+    }
+});
+
+numberInput.addEventListener("input", function () {
+    if (numberInput.value.trim()) {
+        numberInput.classList.remove("border-red-500", "placeholder-red-500");
+    }
+});
+
+complementInput.addEventListener("input", function () {
+    if (complementInput.value.trim()) {
+        complementInput.classList.remove("border-red-500", "placeholder-red-500");
+    }
+});
+
+// Fechar o modal de confirmação
+closeConfirmationModalBtn.addEventListener("click", function () {
+    confirmationModal.style.display = "none";
+});
+
+// Resetar os estilos dos campos quando o modal do carrinho for reaberto
+cartBtn.addEventListener("click", function () {
+    resetFieldStyles();
+});
+
 
 
 

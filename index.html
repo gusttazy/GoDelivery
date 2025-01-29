@@ -220,21 +220,24 @@
         <input type="text" id="street" placeholder="Rua, avenida, etc." class="w-full border-2 p-2 rounded my-1" />
       </div>
 
-      <!-- Número -->
-      <div class="mt-2">
-        <label for="number" class="font-medium flex items-center gap-2">
-          <i class="fa fa-tag"></i> Número
-        </label>
-        <input type="text" id="number" placeholder="Número da residência" class="w-full border-2 p-2 rounded my-1" />
-      </div>
+      <!-- Número e Complemento (lado a lado) -->
+      <div class="flex gap-4 mt-2">
+        <!-- Número -->
+        <div class="flex-1">
+          <label for="number" class="font-medium flex items-center gap-2">
+            <i class="fa fa-tag"></i> Número
+          </label>
+          <input type="text" id="number" placeholder="Número da residência" class="w-full border-2 p-2 rounded my-1" />
+        </div>
 
-      <!-- Complemento -->
-      <div class="mt-2">
-        <label for="complement" class="font-medium flex items-center gap-2">
-          <i class="fa fa-info-circle"></i> Complemento
-        </label>
-        <input type="text" id="complement" placeholder="Apartamento, referência, etc."
-          class="w-full border-2 p-2 rounded my-1" />
+        <!-- Complemento -->
+        <div class="flex-1">
+          <label for="complement" class="font-medium flex items-center gap-2">
+            <i class="fa fa-info-circle"></i> Complemento
+          </label>
+          <input type="text" id="complement" placeholder="Apartamento, referência, etc."
+            class="w-full border-2 p-2 rounded my-1" />
+        </div>
       </div>
 
       <!-- Botões -->
@@ -249,6 +252,25 @@
     </div>
   </div>
   <!-- Modal fim -->
+
+  <!-- Modal de confirmação -->
+  <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+    id="confirmation-modal">
+    <div class="bg-white p-5 rounded-md w-[90%] max-w-[400px] text-center">
+      <!-- Ícone de sucesso -->
+      <div class="text-6xl mb-4 text-green-500">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <!-- Mensagem de sucesso -->
+      <h2 class="text-xl font-bold mb-2">Pedido Finalizado!</h2>
+      <p class="text-gray-600">Seu pedido foi enviado com sucesso. Obrigado!</p>
+      <!-- Botão para fechar o modal -->
+      <button id="close-confirmation-modal-btn"
+        class="bg-green-600 text-white px-4 py-2 rounded mt-4 hover:bg-green-700 duration-300">
+        Fechar
+      </button>
+    </div>
+  </div>
 
   <!-- Botao carrinho -->
   <footer class="fixed bottom-4 right-4 z-40 opacity-0 translate-y-4 transition-all duration-300 ease-in-out hidden"
