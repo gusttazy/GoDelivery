@@ -1,8 +1,6 @@
-# 🍔 Gusta Burguer
+# Gusta Burguer 🍔
 
 Este projeto simula um site de um restaurante, onde os usuários podem visualizar o cardápio, adicionar itens ao carrinho e finalizar pedidos. Desenvolvido com tecnologias modernas, o **Gusta Burguer** oferece uma experiência de usuário fluida e interativa.
-
-🔗 **Preview do Projeto:** [Gusta Burguer](https://go-delivery-kappa.vercel.app/)
 
 ---
 
@@ -14,19 +12,6 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - **🎨 CSS**: Estilização básica e personalização de componentes.
 - **🎨 [Tailwind CSS](https://tailwindcss.com/)**: Framework de CSS utilitário para estilização rápida e responsiva.
 - **🛠️ JavaScript**: Lógica para adicionar/remover produtos, validação de campos e interação com o modal.
-- **🖼️ [FontAwesome](https://fontawesome.com/)**: Ícones utilizados para melhorar a experiência visual.
-
----
-
-## 🛠️ Recursos Futuros
-
-Algumas ideias para melhorar e expandir o projeto no futuro:
-
-- **Integração com Backend**: Conectar o site a um backend para salvar pedidos e gerenciar estoque.
-- **Pagamento Online**: Adicionar opções de pagamento integradas (como PayPal ou Stripe).
-- **Sistema de Login**: Permitir que os usuários criem contas para salvar endereços e histórico de pedidos.
-- **Avaliação de Produtos**: Adicionar um sistema de avaliação e comentários para os produtos.
-- **Menu Dinâmico**: Criar um painel administrativo para atualizar o cardápio em tempo real.
 
 ---
 
